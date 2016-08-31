@@ -49,23 +49,23 @@ create table linkSensorPath (
     PRIMARY KEY(sensorName, sensorPathName)
 );
 
-create table policy (
-    policyName text not null,
-    PRIMARY KEY(policyName)
-);
-
 create table policyGroup (
     policyGroupName text not null,
-    policyGroupDescription text not null,
-    policyGroupComment text,
-    policyGroupIdentifier text not null,
-    policyGroupPeriod text not null,
     PRIMARY KEY(policyGroupName)
+);
+
+create table policy (
+    policyName text not null,
+    policyDescription text not null,
+    policyComment text,
+    policyIdentifier text not null,
+    policyPeriod text not null,
+    PRIMARY KEY(policyName)
 );
 
 create table policyPath (
     policyPathName text not null,
-    policyPah text not null,
+    policyPath text not null,
     PRIMARY KEY(policyPathName)
 );
 
